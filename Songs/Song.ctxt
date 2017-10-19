@@ -1,3 +1,9 @@
 #BlueJ class context
 comment0.target=Song
-numComments=1
+comment1.params=songName
+comment1.target=Song(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment3.params=g
+comment3.target=void\ setGenre(java.lang.String)
+numComments=4
