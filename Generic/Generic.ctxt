@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Generic
+comment1.params=param1
+comment1.target=Generic(int)
+comment1.text=\ can\ have\ as\ many\ fields\ as\ you\ want,\ whatever\ types\ or\ names\nthis\ is\ a\ mult-line\ comment
+comment2.params=
+comment2.target=int\ getField1()
+comment3.params=newval
+comment3.target=void\ setField1(int)
+numComments=4
