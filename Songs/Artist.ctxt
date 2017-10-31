@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Artist
+comment1.params=name
+comment1.target=Artist(java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
+numComments=3
