@@ -37,6 +37,21 @@ public class Song
             System.out.println("Title: " + name + " genre: " + genre);   
         }
         System.out.println("Artist:" + artist.getName());
+        if(isFolk()){
+            System.out.println("Folkarama");
+        }
     }
 
+    public boolean isFolk(){
+        String lowercase = genre.toLowerCase();
+        return lowercase.contains("folk");
+        /*
+        if(genre == "folk"){
+            return true;
+        }
+        return false;
+        */
+
+    }
+    
 }
