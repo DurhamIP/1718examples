@@ -1,15 +1,16 @@
 #BlueJ class context
-comment0.target=Song
-comment1.params=songName\ a
-comment1.target=Song(java.lang.String,\ Artist)
-comment2.params=songName\ artistName
-comment2.target=Song(java.lang.String,\ java.lang.String)
+comment0.params=songName\ a
+comment0.target=Song(java.lang.String,\ Artist)
+comment1.params=songName\ artistName
+comment1.target=Song(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getName()
 comment3.params=
-comment3.target=java.lang.String\ getName()
-comment4.params=
-comment4.target=java.lang.String\ getArtistName()
-comment5.params=g
-comment5.target=void\ setGenre(java.lang.String)
+comment3.target=java.lang.String\ getArtistName()
+comment4.params=g
+comment4.target=void\ setGenre(java.lang.String)
+comment5.params=
+comment5.target=void\ print()
 comment6.params=
-comment6.target=void\ print()
+comment6.target=boolean\ isFolk()
 numComments=7
