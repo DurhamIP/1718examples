@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Person
+comment1.params=name
+comment1.target=Person(java.lang.String)
+comment2.params=father
+comment2.target=void\ setFather(Person)
+comment3.params=mother
+comment3.target=void\ setMother(Person)
+comment4.params=
+comment4.target=Person\ getMother()
+comment5.params=
+comment5.target=Person\ getMaternalGrandmother()
+numComments=6
