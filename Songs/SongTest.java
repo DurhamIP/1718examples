@@ -29,7 +29,7 @@ public class SongTest
     @Before
     public void setUp()
     {
-            song = new Song("Sally Wheatley", "Jez Lowe");
+            song = new Song("Sally Wheatley");
     }
 
     /**
@@ -66,6 +66,15 @@ public class SongTest
         song.setGenre("Folk rock");
         assertEquals(true, song.isFolk());
     }
+
+    @Test
+    public void testSongsList()
+    {
+        Artist artist1 = new Artist("Pat");
+        Song song1 = new Song("Postman");
+        artist1.addSong(song1);
+    }
 }
+
 
 
