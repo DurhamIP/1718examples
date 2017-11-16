@@ -27,4 +27,17 @@ public class Artist
         }
         
     }
+    
+    public Song mostRecentSong(){
+//        Song mostRecent = new Song("phony");
+ //       Song mostRecent = songs.get(0);
+        Song mostRecent = null;
+        
+        for(Song song : songs){
+            if(mostRecent == null || song.getYear() > mostRecent.getYear()){
+                mostRecent = song;
+            }
+        }
+        return mostRecent;
+    }
 }

@@ -15,6 +15,13 @@ public class Song
         return name;
     }
 
+    public void setYear(int year){
+        this.year = year;
+    }
+    
+    public int getYear(){
+        return year;
+    }
 
     public void setGenre(String g){
         genre = g;

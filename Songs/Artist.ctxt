@@ -8,4 +8,6 @@ comment3.params=song
 comment3.target=void\ addSong(Song)
 comment4.params=
 comment4.target=void\ printSongs()
-numComments=5
+comment5.params=
+comment5.target=Song\ mostRecentSong()
+numComments=6

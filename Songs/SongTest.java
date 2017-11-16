@@ -74,7 +74,21 @@ public class SongTest
         Song song1 = new Song("Postman");
         artist1.addSong(song1);
     }
+
+    @Test
+    public void testMostRecent()
+    {
+        Song song1 = new Song("A");
+        Song song2 = new Song("B");
+        song1.setYear(2016);
+        song2.setYear(2017);
+        Artist artist1 = new Artist("Debs");
+        artist1.addSong(song1);
+        artist1.addSong(song2);
+        assertEquals(song2, artist1.mostRecentSong());
+    }
 }
+
 
 
 
