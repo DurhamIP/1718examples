@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Board
+comment1.params=
+comment1.target=Board()
+comment2.params=piece\ row
+comment2.target=boolean\ hasRow(Piece,\ int)
+comment2.text=\n\ \ \ \ public\ boolean\ pieceWins(\ piece){\n\ \ \ \ \ \ \ \ \n\ \ \ \ }\n
+comment3.params=piece\ row\ column
+comment3.target=void\ makeMove(Piece,\ int,\ int)
+comment3.text=\n\ \ \ \ \n\ \ \ \ public\ boolean\ isDraw(){\n\n\ \ \ \ }\n\n\ \ \ \ public\ boolean\ hasFinished(){\n\n\ \ \ \ }\n
+comment4.params=
+comment4.target=void\ play()
+numComments=5
