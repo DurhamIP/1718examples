@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class Artist
 {
     private String name;
-    private java.util.Date dob;
-    private String instrument;
     private String recordLabel;
     private ArrayList<Song> songs;
     
