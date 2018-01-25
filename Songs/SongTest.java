@@ -87,7 +87,17 @@ public class SongTest
         artist1.addSong(song2);
         assertEquals(song2, artist1.mostRecentSong());
     }
+
+    @Test
+    public void printBand()
+    {
+        Band band1 = new Band("Led Zeppelin");
+        Soloist rp = new Soloist("Robert Plant");
+        band1.addMember(rp);
+        System.out.println(band1);
+    }
 }
+
 
 
 

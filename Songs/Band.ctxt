@@ -2,4 +2,8 @@
 comment0.target=Band
 comment1.params=name
 comment1.target=Band(java.lang.String)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=m
+comment3.target=void\ addMember(Soloist)
+numComments=4

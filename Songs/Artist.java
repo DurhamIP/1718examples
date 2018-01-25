@@ -38,4 +38,9 @@ public class Artist
         }
         return mostRecent;
     }
+    
+    @Override
+    public String toString(){
+        return name;
+    }
 }

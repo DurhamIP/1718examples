@@ -20,4 +20,6 @@ comment7.params=
 comment7.target=void\ testSongsList()
 comment8.params=
 comment8.target=void\ testMostRecent()
-numComments=9
+comment9.params=
+comment9.target=void\ printBand()
+numComments=10
