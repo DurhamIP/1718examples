@@ -30,6 +30,7 @@ public class SongTest
     public void setUp()
     {
             song = new Song("Sally Wheatley");
+            song.setYear(1763);
     }
 
     /**
@@ -96,7 +97,16 @@ public class SongTest
         band1.addMember(rp);
         System.out.println(band1);
     }
+
+    @Test
+    public void equalsthing()
+    {
+        Song song1 = new Song("Sally Wheatley");
+        song1.setYear(1763);
+        assertEquals(true, song1.equals(song));
+    }
 }
+
 
 
 

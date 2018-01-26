@@ -11,7 +11,7 @@ public class Band extends Artist
 
     @Override
     public String toString(){
-        return "I am a band " + super.toString() +
+        return "I am a band " + name + // because nams is protected
         " and my members are " + members;
     }
 

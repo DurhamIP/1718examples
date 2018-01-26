@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Artist
 {
-    private String name;
+    protected String name;
     private String recordLabel;
     private ArrayList<Song> songs;
     

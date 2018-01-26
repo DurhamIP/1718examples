@@ -55,4 +55,16 @@ public class Song
 
     }
     
+    @Override
+    public boolean equals(Object s){
+        if(this==s){
+            return true;
+        }
+        if(!(s instanceof Song)){
+            return false;
+        }
+        Song song = (Song) s;
+        return name.equals(song.name) && year==song.year;
+    }
+    
 }
