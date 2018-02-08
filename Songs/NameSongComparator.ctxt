@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.target=NameSongComparator
+comment1.params=song1\ song2
+comment1.target=int\ compare(Song,\ Song)
+numComments=2

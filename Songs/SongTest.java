@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.*;
 
 /**
  * The test class SongTest.
@@ -104,6 +105,29 @@ public class SongTest
         Song song1 = new Song("Sally Wheatley");
         song1.setYear(1763);
         assertEquals(true, song1.equals(song));
+    }
+    
+    @Test
+    public void sortSort(){
+        Song song1 = new Song("Sally Wheatley");
+        song1.setYear(1763);
+        Song song2 = new Song("Why Worry");
+        song2.setYear(1983);
+        Song song3 = new Song("Angels");
+        song3.setYear(2005);
+        List<Song> songs = new ArrayList<>();
+        songs.add(song1);
+        songs.add(song2);
+        songs.add(song3);
+        System.out.println(songs);
+        Collections.sort(songs);
+        System.out.println(songs);
+        assertEquals(songs.get(0), song1);
+        Collections.sort(songs, new NameSongComparator());
+        System.out.println(songs);
+        assertEquals(songs.get(0), song3);
+        
+        
     }
 }
 

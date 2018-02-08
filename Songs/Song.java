@@ -1,11 +1,9 @@
-
-public class Song
+public class Song implements Comparable<Song>
 {
     private int year;
     private String genre;
     private String name;
     private int tempo; // bpm
-
 
     public Song(String songName){
         name = songName;
@@ -66,5 +64,25 @@ public class Song
         Song song = (Song) s;
         return name.equals(song.name) && year==song.year;
     }
+
+    @Override
+    public String toString(){
+    return "Wow what a great song " + name;
+    }
+
+    public static void main(String[] args){
+    String firstname;
+    if(args.length > 0){
+        firstname = args[0];
+    }
+    else{
+        firstname = "John";
+    }
+    Song s = new Song(firstname  + " Ball");
+    System.out.println(s);
+    }
     
+    public int compareTo(Song s){
+        return this.year - s.year;
+    }
 }
