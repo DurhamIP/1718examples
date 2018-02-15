@@ -1,3 +1,5 @@
+import java.io.*;
+
 public class Song implements Comparable<Song>
 {
     private int year;
@@ -13,10 +15,15 @@ public class Song implements Comparable<Song>
         return name;
     }
 
-    public void setYear(int year){
-        this.year = year;
+    public void setYear(int year) throws NoSuchYearException{
+        if(year<0){
+            throw new NoSuchYearException(year);
+        }
+        else{
+            this.year = year;
+        }
     }
-    
+
     public int getYear(){
         return year;
     }
@@ -46,13 +53,13 @@ public class Song implements Comparable<Song>
         return lowercase.contains("folk");
         /*
         if(genre == "folk"){
-            return true;
+        return true;
         }
         return false;
-        */
+         */
 
     }
-    
+
     @Override
     public boolean equals(Object s){
         if(this==s){
@@ -67,22 +74,46 @@ public class Song implements Comparable<Song>
 
     @Override
     public String toString(){
-    return "Wow what a great song " + name;
+        return "Wow what a great song " + name;
     }
 
     public static void main(String[] args){
-    String firstname;
-    if(args.length > 0){
-        firstname = args[0];
+        String firstname;
+        if(args.length > 0){
+            firstname = args[0];
+        }
+        else{
+            firstname = "John";
+        }
+        Song s = new Song(firstname  + " Ball");
+        System.out.println(s);
     }
-    else{
-        firstname = "John";
-    }
-    Song s = new Song(firstname  + " Ball");
-    System.out.println(s);
-    }
-    
+
     public int compareTo(Song s){
         return this.year - s.year;
     }
+
+    public void saveToFile(String fname){
+        try{
+            FileWriter f = new FileWriter(fname);
+            f.write(""+year);
+            f.write("\n");
+            if(genre==null){
+                genre="no genre";
+            }
+            f.write(genre);
+            f.write("\n");
+            f.write("\n");
+            f.write(name);
+            f.write("\n");
+            f.write(tempo);
+            f.write("\n");
+            f.close();
+        }
+        catch(IOException e){
+            System.out.println("Oops silly file " + fname);
+        }
+    }
+
+    
 }

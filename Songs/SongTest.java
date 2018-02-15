@@ -30,8 +30,13 @@ public class SongTest
     @Before
     public void setUp()
     {
+        try{
             song = new Song("Sally Wheatley");
             song.setYear(1763);
+        }
+        catch(NoSuchYearException e){
+         // not going to happen   
+        }
     }
 
     /**
@@ -78,7 +83,7 @@ public class SongTest
     }
 
     @Test
-    public void testMostRecent()
+    public void testMostRecent () throws NoSuchYearException
     {
         Song song1 = new Song("A");
         Song song2 = new Song("B");
@@ -100,7 +105,7 @@ public class SongTest
     }
 
     @Test
-    public void equalsthing()
+    public void equalsthing () throws NoSuchYearException
     {
         Song song1 = new Song("Sally Wheatley");
         song1.setYear(1763);
@@ -108,7 +113,7 @@ public class SongTest
     }
     
     @Test
-    public void sortSort(){
+    public void sortSort() throws Exception{
         Song song1 = new Song("Sally Wheatley");
         song1.setYear(1763);
         Song song2 = new Song("Why Worry");
@@ -129,7 +134,14 @@ public class SongTest
         
         
     }
+
+    @Test
+    public void saveSong()
+    {
+        song.saveToFile("sweet");
+    }
 }
+
 
 
 
