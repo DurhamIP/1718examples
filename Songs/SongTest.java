@@ -139,6 +139,8 @@ public class SongTest
     public void saveSong()
     {
         song.saveToFile("sweet");
+        Song s = Song.createFromFile("sweet");
+        assertEquals(song, s);
     }
 }
 

@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.*;
 
 public class Song implements Comparable<Song>
 {
@@ -103,7 +104,6 @@ public class Song implements Comparable<Song>
             }
             f.write(genre);
             f.write("\n");
-            f.write("\n");
             f.write(name);
             f.write("\n");
             f.write(tempo);
@@ -115,5 +115,43 @@ public class Song implements Comparable<Song>
         }
     }
 
-    
+    public static Song createFromFile(String fname){
+        int year = 0;
+        try{
+            Scanner sc = new Scanner(new File(fname));
+            // each token is a line
+            sc.useDelimiter("\\n");
+
+            if(sc.hasNextInt()){
+                year = sc.nextInt();
+            }
+            else{
+                sc.next();
+            }
+            String genre = sc.next();
+            if(genre.equals("no genre")){
+                genre = null;
+            }
+            String name = sc.next();
+            int tempo = 0;
+            if(sc.hasNextInt()){
+                tempo = sc.nextInt();
+            }
+            Song s = new Song(name);
+            s.setYear(year);
+            s.setGenre(genre);
+            s.tempo = tempo;
+
+            return s;
+        }
+        catch(IOException e){
+            System.out.println("That did not work");
+            return null;
+        }
+        catch(NoSuchYearException f){
+            System.out.println("Bad year: " + year);
+            return null;
+        }
+    }
+
 }
