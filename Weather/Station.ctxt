@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Station
+comment1.params=name
+comment1.target=Station(java.lang.String)
+comment2.params=
+comment2.target=void\ loadObservations()
+comment3.params=year
+comment3.target=int\ totalafYear(int)
+numComments=4
