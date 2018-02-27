@@ -9,11 +9,11 @@ public class Observation
 {
     private int year;
     private int month;
-    private double tmax;
-    private double tmin;
-    private int airfrost;
-    private double rain;
-    private double sun;
+    private Double tmax;
+    private Double tmin;
+    private Integer airfrost;
+    private Double rain;
+    private Double sun;
 
     public Observation(){
 
@@ -83,14 +83,41 @@ public class Observation
     }
 
     public static Observation fromHistoryLine(String text){
-        Observation o = new Observation();
-        Scanner lsc = new Scanner(text);
-        o.setYear(lsc.nextInt());
-        o.setMonth(lsc.nextInt());
-        o.setTmax(lsc.nextDouble());
-        o.setTmin(lsc.nextDouble());
-        o.setAirfrost(lsc.nextInt());
-        return o;
+        try{
+            Observation o = new Observation();
+            Scanner lsc = new Scanner(text);
+            o.setYear(lsc.nextInt());
+            o.setMonth(lsc.nextInt());
+            if(lsc.hasNextDouble()){
+                o.setTmax(lsc.nextDouble());
+            }
+            else{
+                lsc.next();   
+            }
+            if(lsc.hasNextDouble()){
+                o.setTmin(lsc.nextDouble());
+            }
+            else{
+                lsc.next();   
+            }
+            if(lsc.hasNextInt()){
+                o.setAirfrost(lsc.nextInt());
+            }
+            else{
+                lsc.next();   
+            }
+            if(lsc.hasNextDouble()){
+                o.setRain(lsc.nextDouble());
+            }
+            else{
+                lsc.next();   
+            }
+            return o;
+        }
+        catch(InputMismatchException e){
+            System.out.println("problem with " + text);
+            throw e;
+        }
 
     }
 }

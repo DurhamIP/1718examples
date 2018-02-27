@@ -50,10 +50,12 @@ public class WeatherTest
     }
 
     @Test
-    public void stationFromWeb () throws Exception
+    public void stationFromWebAirFrost () throws Exception
     {
         Station durham = new Station("Durham");
         durham.loadObservations();
+        assertEquals(44, durham.totalafYear(1884));
+        
     }
 }
 

@@ -18,7 +18,7 @@ public class Station
         InputStream in = url.openStream();
         Scanner urlsc = new Scanner(in);
         for(int i = 0; i<8; i++){
-            urlsc.next();
+            urlsc.nextLine();
         }
 
         while(urlsc.hasNextLine()){
@@ -38,5 +38,40 @@ public class Station
         return aftotal;
     }
 
-   
+    public double totalrainYear(int year){
+        double raintotal = 0;
+        for(Observation o: observations){
+            if(o.getYear()==year){
+                raintotal += o.getRain();
+            }
+        }
+        return raintotal;
+    }
+
+    public static void main(String[] args) throws Exception{
+        int year = 0;
+        if(args.length > 0 ){
+            year = Integer.parseInt(args[0]);
+        }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Welcome user");
+        if(year ==0 ){
+            System.out.println("Which year are you interested in?");
+            year = in.nextInt();
+        }
+        Station durham = new Station("Durham");
+        durham.loadObservations();
+
+        System.out.println("frost or rain?");
+        String input = in.next();
+        switch(input){
+            case "frost":
+            System.out.println("Air frost days in " + year + " = " + durham.totalafYear(year));
+
+            case "rain":
+            System.out.println("Rainfall days in " + year + " = " + durham.totalrainYear(year));
+
+        }
+
+    }
 }
