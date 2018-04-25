@@ -142,7 +142,21 @@ public class SongTest
         Song s = Song.createFromFile("sweet");
         assertEquals(song, s);
     }
+
+    @Test
+    public void cloneMe()
+    {
+        Artist artist1 = new Artist("A");
+        Song song1 = new Song("S1");
+        artist1.addSong(song1);
+        Artist artist2 = artist1.clone();
+        Song song2 = new Song("S2");
+        artist2.addSong(song2);
+        artist2.printSongs();
+        artist1.printSongs();
+    }
 }
+
 
 
 

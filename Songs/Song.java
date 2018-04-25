@@ -190,4 +190,11 @@ public class Song implements Comparable<Song>
         Platform.runLater(() -> initialiseGUI2());
     }
 
+    public Song clone(){
+        Song clone = new Song(this.name);
+        clone.genre = this.genre;
+        clone.year = this.year;
+        clone.tempo = this.tempo;
+        return clone;
+    }
 }

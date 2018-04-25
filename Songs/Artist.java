@@ -43,4 +43,15 @@ public class Artist
     public String toString(){
         return name;
     }
+    
+    public Artist clone(){
+        Artist clone = new Artist(this.name);
+        clone.recordLabel = this.recordLabel;
+        clone.songs = new ArrayList<Song>();
+        for(Song song : this.songs){
+            clone.songs.add(song.clone());
+        }
+
+        return clone;
+    }
 }
