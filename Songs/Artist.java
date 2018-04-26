@@ -1,14 +1,16 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Artist
 {
     protected String name;
     private String recordLabel;
     private ArrayList<Song> songs;
+    private Random rand;
     
     public Artist(String name){
         this.name = name;
         songs = new ArrayList<Song>();
+        rand = new Random(123459345);
     }
     
     public String getName(){
@@ -53,5 +55,12 @@ public class Artist
         }
 
         return clone;
+    }
+    
+    public void addFiveRandomSongs(){
+        for (int i = 0; i<5; i++){
+            Song s = new Song ("Song " + rand.nextInt());
+            songs.add(s);
+        }
     }
 }
